@@ -1,0 +1,9 @@
+[submodule "wallet-core"]
+	path = wallet-core
+	url = https://github.com/lucasmoraist/wallet-core
+[submodule "transfer-manager"]
+	path = transfer-manager
+	url = https://github.com/lucasmoraist/transfer-manager
+[submodule "notification-svc"]
+	path = notification-svc
+	url = https://github.com/lucasmoraist/notification-svc
