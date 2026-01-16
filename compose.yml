@@ -43,17 +43,13 @@ services:
       - backend
 
   mongo:
-    image: mongo:7.0
+    image: mongo
     restart: always
     ports:
       - "27017:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-    volumes:
-      - mongo:/data/db
-    networks:
-      - backend
 
   mongo-express:
     image: mongo-express
@@ -65,8 +61,6 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
       ME_CONFIG_BASICAUTH: false
-    networks:
-      - backend
 
 volumes:
   rabbitmq-data:
@@ -74,8 +68,6 @@ volumes:
   db:
     driver: local
   pgadmin:
-    driver: local
-  mongo:
     driver: local
 
 networks:
