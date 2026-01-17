@@ -5,7 +5,7 @@
 [![RabbitMQ](https://img.shields.io/badge/RabbitMQ-Event_Driven-orange)](https://www.rabbitmq.com/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-blue)](https://www.docker.com/)
 
-**PayFlow** é um ecossistema de microserviços focado no processamento resiliente de transferências financeiras. Este projeto simula uma arquitetura de pagamentos instantâneos (semelhante ao Pix), demonstrando conceitos avançados de arquitetura de software, consistência eventual e sistemas distribuídos.
+**PayFlow** é um ecossistema de microserviços focado no processamento resiliente de transferências financeiras. Este projeto simula uma arquitetura de pagamentos instantâneos, demonstrando conceitos avançados de arquitetura de software, consistência eventual e sistemas distribuídos.
 
 ---
 
