@@ -19,7 +19,7 @@ O sistema foi desenhado seguindo o padrão **Event-Driven Architecture (EDA)**. 
 | :--- | :--- | :--- | :--- |
 | **Transfer Manager** | `/transfer-manager` | `8081` | **Gateway de Entrada**. Recebe a intenção de transferência, valida dados básicos e orquestra o evento inicial. |
 | **Wallet Core** | `/wallet-core` | `8080` | **Ledger Financeiro**. Gerencia usuários, carteiras e saldos. Executa a movimentação financeira com ACID e consistência. |
-| **Notification Svc** | `/notification-svc` | N/A | **Worker**. Consome eventos de sucesso para notificar os usuários (simulação de e-mail). |
+| **Notification Svc** | `/notification-svc` | `8083` | **Worker**. Consome eventos de sucesso para notificar os usuários (simulação de e-mail). |
 
 ### 🔄 Fluxo da Informação
 
