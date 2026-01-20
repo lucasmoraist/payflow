@@ -51,31 +51,22 @@ A maneira mais simples de executar o ecossistema completo é utilizando o Docker
 git clone [https://github.com/lucasmoraist/payflow.git](https://github.com/lucasmoraist/payflow.git)
 cd payflow
 ```
-2. Gere os artefatos (Build): Execute o script de build ou faça manualmente em cada pasta:
+2. Dentro de `k8s/applications.yml` adicione um valor para ``JSM_EMAIL`` e ``JSM_PASSWORD`` 
+   com um email e senha para envio de email com Java Mail Sender
 
+3. Execute os serviços via script (com base no seu sistema operacional):
 ```Bash
-# Linux/Mac
-./gradlew clean build -x test
+# No Linux/Mac
+exec-services-linux.sh
 
-# Windows (Powershell)
-./gradlew.bat clean build -x test
+# No Windows
+exec-services-win.bat
 ```
 
-**Nota:** É necessário rodar o build dentro de cada pasta de microserviço (`wallet-core`, ``transfer-manager``, ``notification-svc``) se não houver um ``settings.gradle`` global.
-
-3. Suba a infraestrutura: Na raiz do projeto (onde está o compose.yml):
-
+4. Acesse o dashboard do Minikube
 ```Bash
-docker-compose up --build -d
+minikube dashboard
 ```
-
-4. Verifique os containers:
-
-```Bash
-docker ps
-```
-
-Certifique-se de que os 3 serviços java, o postgres e o rabbitmq estão Up.
 
 ---
 
