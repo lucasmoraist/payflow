@@ -131,6 +131,6 @@ spec:
             - name: RABBITMQ_PASSWORD
               value: "guest"
             - name: JSM_EMAIL
-              value: "luksmnt1101@gmail.com"
+              value: ""
             - name: JSM_PASSWORD
-              value: "thdc hcmb chmp hinf"
+              value: ""
