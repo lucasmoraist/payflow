@@ -38,7 +38,7 @@ spec:
       nodePort: 30000
   selector:
     app: rabbitmq
-  type: NodePort
+    type: NodePort
 
 ---
 # --- POSTGRES ---
@@ -73,6 +73,7 @@ kind: Service
 metadata:
   name: postgres
 spec:
+  type: LoadBalancer
   ports:
     - port: 5432
   selector:
@@ -110,6 +111,7 @@ kind: Service
 metadata:
   name: mongo
 spec:
+  type: LoadBalancer
   ports:
     - port: 27017
   selector:
