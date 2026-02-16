@@ -51,10 +51,14 @@ A maneira mais simples de executar o ecossistema completo é utilizando o Docker
 git clone [https://github.com/lucasmoraist/payflow.git](https://github.com/lucasmoraist/payflow.git)
 cd payflow
 ```
-2. Dentro de `k8s/applications.yml` adicione um valor para ``JSM_EMAIL`` e ``JSM_PASSWORD`` 
+2. Certifique-se de que cada microserviço esteja atualizado com o comando:
+````bash
+git submodule update --init --remote <nome-do-microserviço>
+````
+3. Dentro de `k8s/applications.yml` adicione um valor para ``JSM_EMAIL`` e ``JSM_PASSWORD`` 
    com um email e senha para envio de email com Java Mail Sender
 
-3. Execute os serviços via script (com base no seu sistema operacional):
+4. Execute os serviços via script (com base no seu sistema operacional):
 ```Bash
 # No Linux/Mac
 exec-services-linux.sh
@@ -63,7 +67,7 @@ exec-services-linux.sh
 exec-services-win.bat
 ```
 
-4. Acesse o dashboard do Minikube
+5. Acesse o dashboard do Minikube
 ```Bash
 minikube dashboard
 ```
